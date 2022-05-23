@@ -26,6 +26,7 @@ import {DartComponent} from './views/admin/dart/dart.component';
 import { GramanComponent } from "./graman/graman.component";
 import { FormComponent } from "./form/form.component";
 import { UploadpgComponent } from "./uploadpg/uploadpg.component";
+import { UpdComponent } from "./upd/upd.component";
 
 const routes: Routes = [
   // admin views
@@ -62,6 +63,7 @@ const routes: Routes = [
   { path: "graman", component: GramanComponent},
   { path: "form", component: FormComponent},
   { path: "uploadpg", component: UploadpgComponent},
+  { path: "upd", component: UpdComponent},
 
   // no layout views
   { path: "profile", component: ProfileComponent },

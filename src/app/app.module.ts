@@ -53,6 +53,7 @@ import {DartComponent} from './views/admin/dart/dart.component';
 import { GramanComponent } from './graman/graman.component';
 import { FormComponent } from './form/form.component';
 import { UploadpgComponent } from './uploadpg/uploadpg.component';
+import { UpdComponent } from './upd/upd.component';
 
 @NgModule({
   declarations: [
@@ -96,6 +97,7 @@ import { UploadpgComponent } from './uploadpg/uploadpg.component';
     GramanComponent,
     FormComponent,
     UploadpgComponent,
+    UpdComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

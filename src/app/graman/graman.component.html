@@ -33,7 +33,7 @@
           <div class="w-6/12">
             <a [routerLink]="['/']"
               class="md:block text-left md:pb-2 text-blueGray-600 mr-0 inline-block whitespace-nowrap text-sm uppercase font-bold p-4 px-0">
-              Welcome Nimal
+              Welcome
             </a>
           </div>
           <div class="w-6/12 flex justify-end">
@@ -63,7 +63,7 @@
 
       <ul class="md:flex-col md:min-w-full flex flex-col list-none">
         <li class="items-center ms-3">
-          <a [routerLink]="['/admin/dashboard']" class="text-xs uppercase py-3 font-bold block" routerLinkActive
+          <a class="text-xs uppercase py-3 font-bold block" routerLinkActive
             #adminDashboard="routerLinkActive" [ngClass]="
               adminDashboard.isActive
                 ? 'text-red-600 hover:text-red-700'
@@ -75,7 +75,7 @@
             Dashboard
           </a>
         </li>
-
+<!-- 
         <li class="items-center ms-3">
           <a [routerLink]="['/admin/settings']" class="text-xs uppercase py-3 font-bold block" routerLinkActive
             #adminSettings="routerLinkActive" [ngClass]="
@@ -102,7 +102,7 @@
               "></i>
             Tables
           </a>
-        </li>
+        </li> -->
 
         <!-- <li class="items-center ms-3">
           <a [routerLink]="['/admin/maps']" class="text-xs uppercase py-3 font-bold block" routerLinkActive
