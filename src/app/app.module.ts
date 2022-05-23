@@ -49,6 +49,9 @@ import { SidebarComponent } from "./components/sidebar/sidebar.component";
 import { UserDropdownComponent } from "./components/dropdowns/user-dropdown/user-dropdown.component";
 import { Dashboard2Component } from './dashboard2/dashboard2.component';
 
+import {HttpClientModule} from '@angular/common/http'
+import {FormsModule} from '@angular/forms'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -87,7 +90,7 @@ import { Dashboard2Component } from './dashboard2/dashboard2.component';
     ProfileComponent,
     Dashboard2Component,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
