@@ -48,9 +48,11 @@ import { NotificationDropdownComponent } from "./components/dropdowns/notificati
 import { SidebarComponent } from "./components/sidebar/sidebar.component";
 import { UserDropdownComponent } from "./components/dropdowns/user-dropdown/user-dropdown.component";
 import { Dashboard2Component } from './dashboard2/dashboard2.component';
-
-import {HttpClientModule} from '@angular/common/http'
-import {FormsModule} from '@angular/forms';
+import {DrtViewComponent} from './components/cards/drt-view/drt-view.component';
+import {DartComponent} from './views/admin/dart/dart.component';
+import { GramanComponent } from './graman/graman.component';
+import { FormComponent } from './form/form.component';
+import { UploadpgComponent } from './uploadpg/uploadpg.component';
 
 @NgModule({
   declarations: [
@@ -70,6 +72,8 @@ import {FormsModule} from '@angular/forms';
     CardPageVisitsComponent,
     CardProfileComponent,
     CardSettingsComponent,
+    DrtViewComponent,
+    DartComponent,
     CardSocialTrafficComponent,
     CardStatsComponent,
     CardTableComponent,
@@ -89,10 +93,12 @@ import {FormsModule} from '@angular/forms';
     LandingComponent,
     ProfileComponent,
     Dashboard2Component,
+    GramanComponent,
+    FormComponent,
+    UploadpgComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
 })
-
 export class AppModule {}

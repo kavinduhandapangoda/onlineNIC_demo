@@ -1,5 +1,5 @@
 <nav
-  class="md:left-0 md:block md:fixed md:top-0 md:bottom-0 md:overflow-y-auto md:flex-row md:flex-nowrap md:overflow-hidden shadow-xl bg-white flex flex-wrap items-center justify-between relative md:w-64 z-10 py-4 px-6">
+  class="d-none d-sm-block md:left-0 md:block md:fixed md:top-0 md:bottom-0 md:overflow-y-auto md:flex-row md:flex-nowrap md:overflow-hidden shadow-xl bg-white flex flex-wrap items-center justify-between relative md:w-64 z-10 py-4 px-6">
   <div
     class="md:flex-col md:items-stretch md:min-h-full md:flex-nowrap px-0 flex flex-wrap items-center justify-between w-full mx-auto">
     <!-- Toggler -->
@@ -76,7 +76,7 @@
           </a>
         </li>
 
-        <li class="items-center ms-3">
+        <!-- <li class="items-center ms-3">
           <a [routerLink]="['/admin/settings']" class="text-xs uppercase py-3 font-bold block" routerLinkActive
             #adminSettings="routerLinkActive" [ngClass]="
               adminSettings.isActive
@@ -102,7 +102,7 @@
               "></i>
             Tables
           </a>
-        </li>
+        </li> -->
 
         <!-- <li class="items-center ms-3">
           <a [routerLink]="['/admin/maps']" class="text-xs uppercase py-3 font-bold block" routerLinkActive
@@ -118,7 +118,7 @@
           </a>
         </li> -->
 
-        <li class="items-center ms-3" *ngIf="roleName==='ADMIN'">
+        <!-- <li class="items-center ms-3" *ngIf="roleName==='ADMIN'">
           <a [routerLink]="['/admin/dart']" class="text-xs uppercase py-3 font-bold block" routerLinkActive
              #adminTables="routerLinkActive" [ngClass]="
               adminTables.isActive
@@ -130,7 +130,7 @@
               "></i>
             DRT
           </a>
-        </li>
+        </li> -->
 
         
         <li class="items-center ms-3" *ngIf="roleName==='ADMIN'">
@@ -171,3 +171,27 @@
     </div>
   </div>
 </nav>
+<div class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded"
+  [ngClass]="color === 'dark' ? 'bg-dark' : ''">
+  <div class="rounded-t mb-0 px-4 py-3 border-0 d-none d-sm-block">
+    <div class="flex flex-wrap items-center">
+      <div class="relative w-full px-4 max-w-full flex-grow flex-1">
+        <h3 class="font-semibold text-lg" [ngClass]="color === 'white' ? 'text-blueGray-700' : 'text-white'">
+          Card Tables
+        </h3>
+      </div>
+    </div>
+  </div>
+  <div class="absolute top-0 b-auto  pt-16 sm:w-6/12 -mt-48 sm:mt-0 w-10/12 max-h-860-px mt-5" style="margin-left: 15%; width: 80%;" >
+    <!-- Projects table -->
+    <h3 class="font-semibold text-lg" style="margin-left: 4%;">
+      Card Tables
+    </h3>
+    <input type="file" name="" id="" class="ms-5 mt-5">
+    <a href="" class="btn btn-primary mb-2">Submit</a>
+  </div>
+</div>
+
+
+
+<router-outlet></router-outlet>

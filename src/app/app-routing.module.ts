@@ -22,6 +22,10 @@ import { ProfileComponent } from "./views/profile/profile.component";
 
 // new layouts
 import { Dashboard2Component } from "./dashboard2/dashboard2.component";
+import {DartComponent} from './views/admin/dart/dart.component';
+import { GramanComponent } from "./graman/graman.component";
+import { FormComponent } from "./form/form.component";
+import { UploadpgComponent } from "./uploadpg/uploadpg.component";
 
 const routes: Routes = [
   // admin views
@@ -33,6 +37,8 @@ const routes: Routes = [
       { path: "settings", component: SettingsComponent },
       { path: "tables", component: TablesComponent },
       { path: "maps", component: MapsComponent },
+      { path: "dart", component: DartComponent },
+      
       { path: "", redirectTo: "dashboard", pathMatch: "full" },
     ],
   },
@@ -50,8 +56,13 @@ const routes: Routes = [
   // new layouts
   {
     path: "dashboard2", component: Dashboard2Component,
+    
 
   },
+  { path: "graman", component: GramanComponent},
+  { path: "form", component: FormComponent},
+  { path: "uploadpg", component: UploadpgComponent},
+
   // no layout views
   { path: "profile", component: ProfileComponent },
   { path: "landing", component: LandingComponent },

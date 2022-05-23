@@ -159,7 +159,7 @@ notus-angular
 │   │   │   │   │   └── card-stats.component.ts
 │   │   │   │   └── card-table
 │   │   │   │       ├── card-table.component.html
-│   │   │   │       └── card-table.component.ts
+│   │   │   │       └── drt-view.component.ts
 │   │   │   ├── dropdowns
 │   │   │   │   ├── index-dropdown
 │   │   │   │   │   ├── index-dropdown.component.html
@@ -227,7 +227,7 @@ notus-angular
 │   │       │   │   └── settings.component.ts
 │   │       │   └── tables
 │   │       │       ├── tables.component.html
-│   │       │       └── tables.component.ts
+│   │       │       └── dart.component.ts
 │   │       ├── auth
 │   │       │   ├── login
 │   │       │   │   ├── login.component.html
