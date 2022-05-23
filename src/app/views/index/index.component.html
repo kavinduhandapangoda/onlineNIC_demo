@@ -13,14 +13,14 @@
           That we can create our own identity card without having to go anywhere to use this website.
         </p>
         <div class="mt-12">
-          <a href="#" target="_blank"
+          <a href="#" target="_blank" [routerLink]="['/auth/login']"
             class="get-started text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-red-600 active:bg-red-700 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150">
             User Login
           </a>
-          <a href="#"
+          <a href="#" [routerLink]="['/auth/register']"
             class="github-star ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-blueGray-700 active:bg-blueGray-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
             target="_blank">
-            User SignUp
+            User Register
           </a>
         </div>
       </div>
