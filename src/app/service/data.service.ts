@@ -21,4 +21,23 @@ export class DataService {
 
     return this.httpClient.post('http://nicsystem.test/create', data, { 'headers': headers });
   }
+
+  loginUser(data){
+
+    const headers= new HttpHeaders()
+    //.set('content-type', 'application/json')
+    //.set('Access-Control-Allow-Origin', '*');
+
+    return this.httpClient.post('http://nicsystem.test/login', data, { 'headers': headers });
+  }
+
+  getUser(){
+
+    const headers= new HttpHeaders()
+    //.set('content-type', 'application/json')
+    //.set('Access-Control-Allow-Origin', '*');
+    return this.httpClient.get('http://nicsystem.test/getuser', { 'headers': headers });
+  }
+
+  
 }

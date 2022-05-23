@@ -50,7 +50,7 @@ import { UserDropdownComponent } from "./components/dropdowns/user-dropdown/user
 import { Dashboard2Component } from './dashboard2/dashboard2.component';
 
 import {HttpClientModule} from '@angular/common/http'
-import {FormsModule} from '@angular/forms'
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -94,4 +94,5 @@ import {FormsModule} from '@angular/forms'
   providers: [],
   bootstrap: [AppComponent],
 })
+
 export class AppModule {}
