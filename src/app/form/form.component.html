@@ -11,7 +11,27 @@
       <h6 class="text-blueGray-400 text-sm mt-3 mb-6 font-bold uppercase">
         User Information
       </h6>
-      <div class="flex flex-wrap">
+
+       <div class="flex flex-wrap">
+
+        <div class="w-full lg:w-12/12 px-4">
+          <div class="relative w-full mb-3">
+            <label
+              class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+              htmlFor="grid-password"
+            >
+              Form Request ID
+            </label>
+            <input
+              type="text"
+              value="{{RID}}"
+              readonly
+              class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+              placeholder="Home Address"
+            />
+          </div>
+        </div>
+
         <div class="w-full lg:w-6/12 px-4">
           <div class="relative w-full mb-3">
             <label
@@ -22,11 +42,13 @@
             </label>
             <input
               type="text"
+              value="{{username}}"
               class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-             placeholder="User Name"
+             placeholder="User Name" readonly
             />
           </div>
         </div>
+
         <div class="w-full lg:w-6/12 px-4">
           <div class="relative w-full mb-3">
             <label
@@ -37,6 +59,8 @@
             </label>
             <input
               type="email"
+              readonly
+              value="{{email}}"
               class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
               placeholder="Email Address"
             />
@@ -52,6 +76,8 @@
             </label>
             <input
               type="text"
+              readonly
+              value="{{status}}"
               class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
               placeholder="First Name"
             />
@@ -67,6 +93,7 @@
             </label>
             <input
               type="text"
+              readonly
               class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
               placeholder="Last Name"
             />
@@ -90,6 +117,7 @@
             </label>
             <input
               type="text"
+              readonly
               class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
               placeholder="Home Address"
             />
@@ -104,7 +132,8 @@
               City
             </label>
             <input
-              type="email"
+              type="text"
+              readonly
               class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
               placeholder="Home City"
             />
@@ -120,6 +149,7 @@
             </label>
             <input
               type="text"
+              readonly
               class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
               placeholder="Province"
             />
@@ -135,16 +165,18 @@
             </label>
             <input
               type="text"
+              readonly
               class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
               
             />
           </div>
         </div>
       </div>
-      <a [routerLink]="['/admin/tables']" class="text-xs uppercase py-3 font-bold block" routerLinkActive
-      #adminTables="routerLinkActive"  class="btn ms-4 mt-3" style="background-color: #3150c0; color: white; font-weight: bold;">Submit the data</a>
 
-        
+      <div class="flex flex-wrap">
+          <button (click)="updateRequest()"  class="text-xs uppercase py-3 font-bold block btn ms-4 mt-3" style="background-color: #3150c0; color: white; font-weight: bold;">Verify</button>
+          <button (click)="updateRequestError()"  class="text-xs uppercase py-3 font-bold block btn ms-4 mt-3" style="background-color: #e22c44; color: white; font-weight: bold;">Mark Issue</button>
+      </div>
     </form>
   </div>
 </div>

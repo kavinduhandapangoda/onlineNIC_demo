@@ -60,6 +60,9 @@ import { FormComponent } from './form/form.component';
 import { UploadpgComponent } from './uploadpg/uploadpg.component';
 import { UpdComponent } from './upd/upd.component';
 
+import {HttpClientModule} from '@angular/common/http'
+import {FormsModule} from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -112,6 +115,7 @@ import { UpdComponent } from './upd/upd.component';
       projectId: "<your-project-id>",
     }),
   ],
+
   providers: [],
   bootstrap: [AppComponent],
 })
