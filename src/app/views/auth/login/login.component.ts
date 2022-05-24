@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
       var obj = JSON.stringify(res)
       var obgv2 = JSON.parse(obj)
       console.log(obgv2.msg);
-      localStorage.setItem("userRole",obgv2.role)
+      localStorage.setItem("userRole",obgv2)
 
       if(obgv2.msg == "log in"){
         this.router.navigate(['/admin/dashboard']);

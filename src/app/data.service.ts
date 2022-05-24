@@ -6,7 +6,7 @@ import { HttpHeaders } from "@angular/common/http";
   providedIn: 'root'
 })
 export class DataService {
-
+  headers = new HttpHeaders();
   constructor(private httpClient:HttpClient) { }
 
   getData(){
@@ -52,9 +52,18 @@ export class DataService {
    getUser(){
  
     const headers= new HttpHeaders()
-    //.set('content-type', 'application/json')
-    //.set('Access-Control-Allow-Origin', '*');
     return this.httpClient.get('http://nicsystem.test/getuser', { 'headers': headers });
+  }
+
+  uploadImage(data){
+    const headersData = new HttpHeaders({'Content-Type':'multipart/form-data; charset=utf-8'});
+    console.log(headersData);
+    return this.httpClient.post('http://nicsystem.test/upload',data, {headers: headersData});
+  }
+
+  generatebarCode(data){
+    const headers= new HttpHeaders()
+    return this.httpClient.get('http://nicsystem.test/generatebarcode/'+data, { 'headers': headers });
   }
 
 }

@@ -20,5 +20,9 @@ export class CardSettingsComponent implements OnInit {
      this.dataservice.insertData(this.request).subscribe(res => {
        console.log(res);
      })
+
+     this.dataservice.generatebarCode(this.request.RID).subscribe(res => {
+      console.log(res);
+    })
    }
 }

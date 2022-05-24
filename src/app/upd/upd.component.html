@@ -22,11 +22,13 @@ background: linear-gradient(to bottom right, rgba(223, 208, 77, 1.0), rgba(29, 3
         <h3 class="font-semibold text-lg mt-5" style="margin-left: 7%; font-size: 30px; color: white; font-weight: bold;">
             Document Upload
         </h3>
-        <input type="file" name="" id="" class="ms-5 mt-5">
+        <form enctype="multipart/form-data">
+        <input type="file" name="" id="" class="ms-5 mt-5" (change)="onFileSelected($event)">
         <input type="text" name="" id="" style="width: 35%;" placeholder="Type..">
         <hr class="my-4 md:min-w-full" />
         <br>
-        <a href="" class="btn btn-primary ms-5" style="width: 85%; font-weight: bold;">Submit</a>
+        <button (click)="onUpload()" class="btn btn-primary ms-5" style="width: 85%; font-weight: bold;">Submit</button>
         <img src="assets/img/pattern_angular.png" alt="" srcset="" class="mt-5"  style="width: 280px; margin-left: 25%; ">
+    </form>
     </div>
 </div>
