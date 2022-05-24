@@ -23,6 +23,11 @@ import { IndexComponent } from "./views/index/index.component";
 import { LandingComponent } from "./views/landing/landing.component";
 import { ProfileComponent } from "./views/profile/profile.component";
 
+// angular fb st
+
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireStorageModule } from 'angularfire2/storage';
+
 // components for views and layouts
 
 import { AdminNavbarComponent } from "./components/navbars/admin-navbar/admin-navbar.component";
@@ -99,7 +104,14 @@ import { UpdComponent } from './upd/upd.component';
     UploadpgComponent,
     UpdComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule,
+    AngularFireModule.initializeApp({
+      apiKey: "<your-api-key>",
+      authDomain: "<your-auth-domain>",
+      storageBucket: "<project-id>.appspot.com",
+      projectId: "<your-project-id>",
+    }),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
