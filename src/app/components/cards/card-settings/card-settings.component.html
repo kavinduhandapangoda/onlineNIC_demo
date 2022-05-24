@@ -7,7 +7,8 @@
     </div>
   </div>
   <div class="flex-auto px-4 lg:px-10 py-10 pt-0">
-    <form>
+    <form #requestData = "ngForm" (ngSubmit)="onSubmit(requestData)">
+
       <h6 class="text-blueGray-400 text-sm mt-3 mb-6 font-bold uppercase">
         User Information
       </h6>
@@ -22,8 +23,10 @@
             </label>
             <input
               type="text"
+              name="username" [(ngModel)] = "request.name"
               class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
              placeholder="User Name"
+             
             />
           </div>
         </div>
@@ -39,6 +42,7 @@
               type="email"
               class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
               placeholder="Email Address"
+              name="email" [(ngModel)] = "request.email"
             />
           </div>
         </div>
@@ -54,6 +58,7 @@
               type="text"
               class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
               placeholder="First Name"
+              name="fname" [(ngModel)] = "request.RID"
             />
           </div>
         </div>
@@ -69,6 +74,7 @@
               type="text"
               class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
               placeholder="Last Name"
+              name="lname" ngModel
             />
           </div>
         </div>
@@ -92,6 +98,7 @@
               type="text"
               class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
               placeholder="Home Address"
+              name="address" ngModel
             />
           </div>
         </div>
@@ -107,6 +114,7 @@
               type="email"
               class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
               placeholder="Home City"
+              name="city" ngModel
             />
           </div>
         </div>
@@ -122,6 +130,7 @@
               type="text"
               class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
               placeholder="Province"
+              name="province" ngModel
             />
           </div>
         </div>
@@ -136,15 +145,14 @@
             <input
               type="text"
               class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-              
+              name="postal" ngModel
             />
           </div>
         </div>
       </div>
-      <a [routerLink]="['/admin/tables']" class="text-xs uppercase py-3 font-bold block" routerLinkActive
-      #adminTables="routerLinkActive"  class="btn ms-4 mt-3" style="background-color: #3150c0; color: white; font-weight: bold;">Submit the data</a>
-
-        
+      <button class="text-xs uppercase py-3 font-bold block btn ms-4 mt-3" style="background-color: #3150c0; color: white; font-weight: bold;" type="submit">Submit the form</button>
     </form>
   </div>
 </div>
+
+
