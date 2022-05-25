@@ -12,6 +12,26 @@ export class DataService {
   getData(){
      return this.httpClient.get('http://nicsystem.test/index');
    }
+
+   getDataLevel2(){
+    return this.httpClient.get('http://nicsystem.test/stage2index');
+  }
+
+  getDataLevel3(){
+    return this.httpClient.get('http://nicsystem.test/stage3index');
+  }
+
+  getPoliceReport(data){
+    return this.httpClient.get('http://nicsystem.test/getPoliceReport/'+data);
+  }
+
+  getPeaceReport(data){
+    return this.httpClient.get('http://nicsystem.test/getPeaceReport/'+data);
+  }
+
+  getPhoto(data){
+    return this.httpClient.get('http://nicsystem.test/getPhoto/'+data);
+  }
  
    insertData(data){
  
@@ -32,25 +52,26 @@ export class DataService {
    }
 
    updateRequest(data){
- 
     const headers= new HttpHeaders()
-    //.set('content-type', 'application/json')
-    //.set('Access-Control-Allow-Origin', '*');
-
     return this.httpClient.post('http://nicsystem.test/edit', data, { 'headers': headers });
   }
 
   updateRequestError(data){
- 
     const headers= new HttpHeaders()
-    //.set('content-type', 'application/json')
-    //.set('Access-Control-Allow-Origin', '*');
-
     return this.httpClient.post('http://nicsystem.test/markError', data, { 'headers': headers });
   }
 
+  updateRequestl2(data){
+    const headers= new HttpHeaders()
+    return this.httpClient.post('http://nicsystem.test/editl2', data, { 'headers': headers });
+  }
+
+  updateRequestl3(data){
+    const headers= new HttpHeaders()
+    return this.httpClient.post('http://nicsystem.test/editl3', data, { 'headers': headers });
+  }
+
    getUser(){
- 
     const headers= new HttpHeaders()
     return this.httpClient.get('http://nicsystem.test/getuser', { 'headers': headers });
   }

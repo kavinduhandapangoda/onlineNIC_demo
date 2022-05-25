@@ -25,12 +25,26 @@ export class LoginComponent implements OnInit {
      this.dataservice.loginUser(this.user).subscribe(res => {
       var obj = JSON.stringify(res)
       var obgv2 = JSON.parse(obj)
-      console.log(obgv2.msg);
-      localStorage.setItem("userRole",obgv2)
+      console.log(obgv2);
+      localStorage.setItem("userRole",obgv2.role)
+      localStorage.setItem("useremail",obgv2.email)
 
       if(obgv2.msg == "log in"){
-        this.router.navigate(['/admin/dashboard']);
+
+        if(obgv2.role == "user"){
+          this.router.navigate(['/admin/dashboard']);
+        }else if(obgv2.role == "level 1 User"){
+          this.router.navigate(['/graman']);
+        }else if(obgv2.role == "level 2 User"){
+          this.router.navigate(['/graman']);
+        }else if(obgv2.role == "level 3 User"){
+          this.router.navigate(['/dartDashboard']);
+        }
+
+       
       }
+
+
      })
    }
   

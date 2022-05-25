@@ -27,6 +27,8 @@ import { GramanComponent } from "./graman/graman.component";
 import { FormComponent } from "./form/form.component";
 import { UploadpgComponent } from "./uploadpg/uploadpg.component";
 import { UpdComponent } from "./upd/upd.component";
+// import { DartDashboard } from "dartdashboard"
+import { DrtDashboardComponent } from "./drt-dashboard/drt-dashboard.component"; 
 
 const routes: Routes = [
   // admin views
@@ -64,6 +66,9 @@ const routes: Routes = [
   { path: "form", component: FormComponent},
   { path: "uploadpg", component: UploadpgComponent},
   { path: "upd", component: UpdComponent},
+  { path: "dartDashboard", component: DrtDashboardComponent},
+
+  
 
   // no layout views
   { path: "profile", component: ProfileComponent },

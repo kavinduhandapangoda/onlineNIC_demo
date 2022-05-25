@@ -10,19 +10,34 @@ import {Request} from "src/app/request"
 export class CardSettingsComponent implements OnInit {
   
   request = new Request();
+  requestarray:Request[] = [];
+  counter:any = 100;
+
   constructor(private router:Router, private dataservice:DataService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+
+    this.dataservice.getData().subscribe(res => {
+      var obj = JSON.stringify(res)
+      var obgv2 = JSON.parse(obj)
+      
+      this.requestarray = Object.values(obgv2);
+      this.counter = "R00"+this.requestarray.length;
+    })
+
+  }
 
   onSubmit(){
-    // console.log(this.request
+    this.request.RID = this.counter
+     console.log(this.request);
 
      this.dataservice.insertData(this.request).subscribe(res => {
        console.log(res);
      })
 
-     this.dataservice.generatebarCode(this.request.RID).subscribe(res => {
+    /* this.dataservice.generatebarCode(this.request.RID).subscribe(res => {
       console.log(res);
-    })
+    })*/
+
    }
 }

@@ -57,6 +57,7 @@ import { UpdComponent } from './upd/upd.component';
 
 import {HttpClientModule} from '@angular/common/http'
 import {FormsModule} from '@angular/forms';
+import { DrtDashboardComponent } from './drt-dashboard/drt-dashboard.component';
 
 
 
@@ -103,6 +104,7 @@ import {FormsModule} from '@angular/forms';
     FormComponent,
     UploadpgComponent,
     UpdComponent,
+    DrtDashboardComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
