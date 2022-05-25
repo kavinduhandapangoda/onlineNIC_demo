@@ -11,12 +11,14 @@ export class DrtDashboardComponent implements OnInit {
 
   requestarray:Request[] = []
   counter:any = 0
-  userString:any = localStorage.getItem("userRole");
+  userString:any = ""
   StoragePath:string = "http://nicsystem.test/uploads/"
 
   constructor(private router:Router, private dataservice:DataService) { }
 
   ngOnInit(): void {
+
+    this.userString = localStorage.getItem("userRole");
 
     this.dataservice.getDataLevel3().subscribe(res => {
       var obj = JSON.stringify(res)

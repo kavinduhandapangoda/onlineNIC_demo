@@ -43,13 +43,19 @@ export class DataService {
    }
  
    loginUser(data){
- 
      const headers= new HttpHeaders()
-     //.set('content-type', 'application/json')
-     //.set('Access-Control-Allow-Origin', '*');
- 
      return this.httpClient.post('http://nicsystem.test/login', data, { 'headers': headers });
    }
+
+   logOut(data){
+    const headers= new HttpHeaders()
+    return this.httpClient.post('http://nicsystem.test/logout', data, { 'headers': headers });
+  }
+
+   registerUser(data){
+    const headers= new HttpHeaders()
+    return this.httpClient.post('http://nicsystem.test/register', data, { 'headers': headers });
+  }
 
    updateRequest(data){
     const headers= new HttpHeaders()
@@ -69,6 +75,11 @@ export class DataService {
   updateRequestl3(data){
     const headers= new HttpHeaders()
     return this.httpClient.post('http://nicsystem.test/editl3', data, { 'headers': headers });
+  }
+
+  searchRequestFromMail(data){
+    const headers= new HttpHeaders()
+    return this.httpClient.get('http://nicsystem.test/searchRequestFromMail/'+data, { 'headers': headers });
   }
 
    getUser(){

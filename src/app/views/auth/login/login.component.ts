@@ -39,6 +39,8 @@ export class LoginComponent implements OnInit {
           this.router.navigate(['/graman']);
         }else if(obgv2.role == "level 3 User"){
           this.router.navigate(['/dartDashboard']);
+        }else if(obgv2.role == "level 4 User"){
+          this.router.navigate(['/dartDashboard']);
         }
 
        

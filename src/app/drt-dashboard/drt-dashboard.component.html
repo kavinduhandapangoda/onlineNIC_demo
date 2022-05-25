@@ -283,7 +283,7 @@
               color === 'light'
                 ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
                 : 'bg-red-800 text-red-300 border-red-700'
-            ">
+            " *ngIf="userString === 'level 4 User' ">
             View Police Report
           </th>
             
@@ -293,7 +293,7 @@
               color === 'light'
                 ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
                 : 'bg-red-800 text-red-300 border-red-700'
-            ">View Peace Report</th>
+            " *ngIf="userString === 'level 4 User' ">View Peace Report</th>
 
             <th
             class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
@@ -301,7 +301,7 @@
               color === 'light'
                 ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
                 : 'bg-red-800 text-red-300 border-red-700'
-            ">View Photograph</th>
+            " *ngIf="userString === 'level 4 User' ">View Photograph</th>
 
             <th
             class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
@@ -317,7 +317,7 @@
               color === 'light'
                 ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
                 : 'bg-red-800 text-red-300 border-red-700'
-            ">Options</th>
+            " *ngIf="userString === 'level 4 User' ">Options</th>
         </tr>
       </thead>
       <tbody>
@@ -362,18 +362,18 @@
          </td>
 
           <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4" style="font-size: 15px;">
-            {{request.status}}
+            Level {{request.status}}
           </td>
 
-          <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4" style="font-size: 15px;">
+          <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4" style="font-size: 15px;" *ngIf="userString === 'level 4 User' ">
             <button (click)="viewPoliceImages(request.RID)"  class="text-xs uppercase py-3 font-bold block btn ms-4 mt-3" style="background-color: #3150c0; color: white; font-weight: bold;">View</button>
           </td>
 
-          <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4" style="font-size: 15px;">
+          <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4" style="font-size: 15px;" *ngIf="userString === 'level 4 User' ">
             <button (click)="viewPeaceImages(request.RID)"  class="text-xs uppercase py-3 font-bold block btn ms-4 mt-3" style="background-color: #3150c0; color: white; font-weight: bold;">View</button>
           </td>
 
-          <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4" style="font-size: 15px;">
+          <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4" style="font-size: 15px;" *ngIf="userString === 'level 4 User' ">
             <button (click)="viewPhotoImages(request.RID)"  class="text-xs uppercase py-3 font-bold block btn ms-4 mt-3" style="background-color: #3150c0; color: white; font-weight: bold;">View</button>
           </td>
 
@@ -382,8 +382,8 @@
             <a href="http://nicsystem.test/uploader/{{request.email}}/{{request.RID}}" class="text-xs uppercase py-3 font-bold block btn ms-4 mt-3" style="background-color: #3150c0; color: white; font-weight: bold;">Upload</a>
           </td>
 
-          <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-right">
-            <button (click)="seletedRequest(request)"  class="text-xs uppercase py-3 font-bold block btn ms-4 mt-3" style="background-color: #3150c0; color: white; font-weight: bold;">View</button>
+          <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-right" *ngIf="userString === 'level 4 User' ">
+            <button (click)="seletedRequest(request)"  class="text-xs uppercase py-3 font-bold block btn ms-4 mt-3" style="background-color: #3150c0; color: white; font-weight: bold;">Mark as done</button>
           </td>
           
         </tr>

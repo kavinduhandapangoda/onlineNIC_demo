@@ -16,5 +16,9 @@ export class CardTableComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {}
+  RID:any = ""
+
+  ngOnInit(): void {
+    this.RID = localStorage.getItem('RID');
+  }
 }

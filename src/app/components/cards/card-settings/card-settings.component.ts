@@ -33,6 +33,11 @@ export class CardSettingsComponent implements OnInit {
 
      this.dataservice.insertData(this.request).subscribe(res => {
        console.log(res);
+
+       if(res == "record has been created"){
+        this.router.navigate(['/admin/dashboard']);
+      }
+
      })
 
     /* this.dataservice.generatebarCode(this.request.RID).subscribe(res => {

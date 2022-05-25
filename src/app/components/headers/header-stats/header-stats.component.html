@@ -4,7 +4,7 @@
     <div>
       <!-- Card stats -->
       <div class="flex flex-wrap">
-        <div class="w-full lg:w-6/12 xl:w-3/12 px-4">
+        <div class="w-full lg:w-6/12 xl:w-3/12 px-4" *ngIf="currentState > 0 ">
           <app-card-stats
             statSubtitle="User"
             statTitle="Completed"
@@ -13,37 +13,37 @@
             statPercentColor=""
             statDescripiron=""
             statIconName=""
-            statIconColor="bg-red-500"
+            statIconColor="bg-emerald-500"
           ></app-card-stats>
         </div>
-        <div class="w-full lg:w-6/12 xl:w-3/12 px-4">
+        <div class="w-full lg:w-6/12 xl:w-3/12 px-4" *ngIf="currentState > 1 ">
           <app-card-stats
             statSubtitle="Grama Niladhari"
-            statTitle="Pending"
+            statTitle="Completed"
             statArrow=""
             statPercent=""
             statPercentColor=""
             statDescripiron=""
             statIconName=""
-            statIconColor="bg-orange-500"
+            statIconColor="bg-emerald-500"
           ></app-card-stats>
         </div>
-        <div class="w-full lg:w-6/12 xl:w-3/12 px-4">
+        <div class="w-full lg:w-6/12 xl:w-3/12 px-4" *ngIf="currentState > 2 ">
           <app-card-stats
             statSubtitle="Divisional Secretariat"
-            statTitle="Delayed"
+            statTitle="Completed"
             statArrow=""
             statPercent=""
             statPercentColor=""
             statDescripiron=""
             statIconName=""
-            statIconColor="bg-pink-500"
+            statIconColor="bg-emerald-500"
           ></app-card-stats>
         </div>
-        <div class="w-full lg:w-6/12 xl:w-3/12 px-4">
+        <div class="w-full lg:w-6/12 xl:w-3/12 px-4" *ngIf="currentState > 3 ">
           <app-card-stats
             statSubtitle=" Registration of Persons"
-            statTitle="Delayed"
+            statTitle="Completed"
             statArrow="up"
             statPercent="12"
             statPercentColor=""
