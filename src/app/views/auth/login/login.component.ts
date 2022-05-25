@@ -28,6 +28,7 @@ export class LoginComponent implements OnInit {
       console.log(obgv2);
       localStorage.setItem("userRole",obgv2.role)
       localStorage.setItem("useremail",obgv2.email)
+      localStorage.setItem("username",obgv2.name)
 
       if(obgv2.msg == "log in"){
 

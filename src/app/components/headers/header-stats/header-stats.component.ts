@@ -15,6 +15,7 @@ export class HeaderStatsComponent implements OnInit {
   ngOnInit(): void {
     console.log(this.userEmail);
     this.dataservice.searchRequestFromMail(this.userEmail).subscribe(res => {
+      console.log(res);
       var obj = JSON.stringify(res)
       var obgv2 = JSON.parse(obj)
       var data = Object.values(obgv2);

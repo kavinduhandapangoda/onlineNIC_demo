@@ -54,7 +54,7 @@ export class FormComponent implements OnInit {
         }
       })
     }
-    else if(this.userString == "level 3 User"){
+    else if(this.userString == "level 4 User"){
       this.dataservice.updateRequestl3(this.request).subscribe(res => {
         console.log(res);
         if(res == "request has been updated"){
@@ -62,6 +62,7 @@ export class FormComponent implements OnInit {
         }
       })
     }
+    
     
 
   }

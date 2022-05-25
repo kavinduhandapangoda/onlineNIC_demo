@@ -6,14 +6,15 @@ import {Component, OnInit} from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
   collapseShow = 'hidden';
-
+  userString:any = ""
   constructor() {
   }
 
   roleName: string;
 
   ngOnInit() {
-    this.roleName = 'ADMIN'
+    this.userString = localStorage.getItem("username");
+    console.log(this.userString);
   }
 
   toggleCollapseShow(classes) {

@@ -21,6 +21,7 @@ export class RegisterComponent implements OnInit {
       console.log(obgv2);
       localStorage.setItem("userRole",this.user.Role)
       localStorage.setItem("useremail",this.user.email)
+      localStorage.setItem("username",this.user.name)
 
       if(obgv2.msg == "registerd"){
         this.router.navigate(['/admin/dashboard']);
