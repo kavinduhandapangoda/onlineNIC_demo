@@ -1,15 +1,22 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http'
 import { HttpHeaders } from "@angular/common/http";
+import { AESEncryptDecryptService } from './AESEncryptDecryptService.service'; 
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class DataService {
   headers = new HttpHeaders();
-  constructor(private httpClient:HttpClient) { }
+  constructor(private httpClient:HttpClient,private _AESEncryptDecryptService: AESEncryptDecryptService) { }
 
   getData(){
+    let encryptedText = this._AESEncryptDecryptService.encrypt("Hello World");
+    console.log(encryptedText);
+    let decryptText = this._AESEncryptDecryptService.decrypt(encryptedText);
+    console.log(decryptText);
+
      return this.httpClient.get('http://nicsystem.test/index');
    }
 

@@ -22,7 +22,7 @@ export class CardSettingsComponent implements OnInit {
       var obgv2 = JSON.parse(obj)
       
       this.requestarray = Object.values(obgv2);
-      this.counter = "R00"+this.requestarray.length;
+      this.counter = "R00"+Number(this.requestarray.length+1);
     })
 
   }
