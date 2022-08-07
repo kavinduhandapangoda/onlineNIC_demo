@@ -4,6 +4,7 @@ import * as CryptoJS from 'crypto-js';
 @Injectable({
   providedIn: 'root'
 })
+
 export class AESEncryptDecryptService {
 
   secretKey = "YourSecretKeyForEncryption&Descryption";

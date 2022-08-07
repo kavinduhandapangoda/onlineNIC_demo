@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
 import {DataService} from "src/app/data.service"
+import { AESEncryptDecryptService } from 'src/app/AESEncryptDecryptService.service'; 
 
 @Component({
   selector: 'app-drt-dashboard',
@@ -14,11 +15,13 @@ export class DrtDashboardComponent implements OnInit {
   userString:any = ""
   StoragePath:string = "http://nicsystem.test/uploads/"
 
-  constructor(private router:Router, private dataservice:DataService) { }
+  constructor(private router:Router, private dataservice:DataService, private _AESEncryptDecryptService: AESEncryptDecryptService) { }
 
   ngOnInit(): void {
 
     this.userString = localStorage.getItem("userRole");
+    let decryptText = this._AESEncryptDecryptService.encrypt("R009");
+    console.log(decryptText);
 
     this.dataservice.getDataLevel3().subscribe(res => {
       var obj = JSON.stringify(res)

@@ -290,45 +290,45 @@
 
         <tr *ngFor="let request of requestarray">
           <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4" style="font-size: 15px;">
-            {{request.RID}}
+            {{ request.RID }}
             <div ng-include="'temp.html'" onload="counter=counter+1"></div>
           </td>
 
           <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4" style="font-size: 15px;">
-            {{request.email}}
+            {{ this._AESEncryptDecryptService.decrypt(request.email) }}
             <div ng-include="'temp.html'" onload="counter=counter+1"></div>
           </td>
 
           <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4" style="font-size: 15px;">
-            {{request.fname}}
+            {{ this._AESEncryptDecryptService.decrypt(request.fname) }}
             <div ng-include="'temp.html'" onload="counter=counter+1"></div>
           </td>
 
           <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4" style="font-size: 15px;">
-            {{request.lname}}
+            {{ this._AESEncryptDecryptService.decrypt(request.lname) }}
             <div ng-include="'temp.html'" onload="counter=counter+1"></div>
           </td>
 
           <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4" style="font-size: 15px;">
-            {{request.address}}
+            {{ this._AESEncryptDecryptService.decrypt(request.address) }}
             <div ng-include="'temp.html'" onload="counter=counter+1"></div>
           </td>
 
           <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4" style="font-size: 15px;">
-            {{request.pCode}}
+            {{ this._AESEncryptDecryptService.decrypt(request.pCode) }}
             <div ng-include="'temp.html'" onload="counter=counter+1"></div>
           </td>
 
           <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4" style="font-size: 15px;">
-            {{request.province}}
+            {{ this._AESEncryptDecryptService.decrypt(request.province) }}
           </td>
 
           <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4" style="font-size: 15px;">
-            {{request.city}}
+            {{ this._AESEncryptDecryptService.decrypt(request.city) }}
          </td>
 
           <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4" style="font-size: 15px;">
-            Level {{request.status}}
+            Level {{ request.status }}
           </td>
 
           <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-right">

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
 import {DataService} from "src/app/data.service"
 import {Request} from "src/app/request"
+import { AESEncryptDecryptService } from 'src/app/AESEncryptDecryptService.service'; 
 
 @Component({
   selector: 'app-graman',
@@ -13,7 +14,7 @@ export class GramanComponent implements OnInit {
   requestarray:Request[] = []
   counter:any = 0
   userString:any = localStorage.getItem("userRole");
-  constructor(private router:Router, private dataservice:DataService) { }
+  constructor(private router:Router, private dataservice:DataService,private _AESEncryptDecryptService: AESEncryptDecryptService) { }
 
   ngOnInit(): void {
 
