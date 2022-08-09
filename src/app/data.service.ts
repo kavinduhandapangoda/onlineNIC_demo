@@ -12,10 +12,6 @@ export class DataService {
   constructor(private httpClient:HttpClient,private _AESEncryptDecryptService: AESEncryptDecryptService) { }
 
   getData(){
-    // let encryptedText = this._AESEncryptDecryptService.encrypt("Horana");
-    //console.log(encryptedText);
-    //let decryptText = this._AESEncryptDecryptService.decrypt(encryptedText);
-    //console.log(decryptText);
      return this.httpClient.get('http://nicsystem.test/index');
    }
 
