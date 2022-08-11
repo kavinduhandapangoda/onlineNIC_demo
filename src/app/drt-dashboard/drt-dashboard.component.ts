@@ -15,7 +15,7 @@ export class DrtDashboardComponent implements OnInit {
   userString:any = ""
   StoragePath:string = "http://nicsystem.test/uploads/"
 
-  constructor(private router:Router, private dataservice:DataService, private _AESEncryptDecryptService: AESEncryptDecryptService) { }
+  constructor(private router:Router, private dataservice:DataService, public _AESEncryptDecryptService: AESEncryptDecryptService) { }
 
   ngOnInit(): void {
 

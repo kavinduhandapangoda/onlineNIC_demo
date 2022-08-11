@@ -9,7 +9,7 @@ import { AESEncryptDecryptService } from './AESEncryptDecryptService.service';
 
 export class DataService {
   headers = new HttpHeaders();
-  constructor(private httpClient:HttpClient,private _AESEncryptDecryptService: AESEncryptDecryptService) { }
+  constructor(private httpClient:HttpClient,public _AESEncryptDecryptService: AESEncryptDecryptService) { }
 
   getData(){
      return this.httpClient.get('http://nicsystem.test/index');

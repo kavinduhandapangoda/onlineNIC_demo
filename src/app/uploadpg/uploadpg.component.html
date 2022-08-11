@@ -5,7 +5,7 @@
     <!-- Toggler -->
     <button
       class="cursor-pointer text-black opacity-50 md:hidden px-3 py-1 text-xl leading-none bg-transparent rounded border border-solid border-transparent"
-      type="button" (click)="toggleCollapseShow('bg-white m-2 py-3 px-6')">
+      type="button" >
       <i class="fas fa-bars"></i>
     </button>
     <!-- Brand -->
@@ -26,7 +26,7 @@
     <!-- Collapse -->
     <div
       class="md:flex md:flex-col md:items-stretch md:opacity-100 md:relative md:mt-4 md:shadow-none shadow absolute top-0 left-0 right-0 z-40 overflow-y-auto overflow-x-hidden h-auto items-center flex-1 rounded"
-      [ngClass]="collapseShow">
+      >
       <!-- Collapse header -->
       <div class="md:min-w-full md:hidden block pb-4 mb-4 border-b border-solid border-blueGray-200">
         <div class="flex flex-wrap">
@@ -39,7 +39,7 @@
           <div class="w-6/12 flex justify-end">
             <button type="button"
               class="cursor-pointer text-black opacity-50 md:hidden px-3 py-1 text-xl leading-none bg-transparent rounded border border-solid border-transparent"
-              (click)="toggleCollapseShow('hidden')">
+              >
               <i class="fas fa-times"></i>
             </button>
           </div>
@@ -86,11 +86,11 @@
   </div>
 </nav>
 <div class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded"
-  [ngClass]="color === 'dark' ? 'bg-dark' : ''">
+  >
   <div class="rounded-t mb-0 px-4 py-3 border-0 d-none d-sm-block">
     <div class="flex flex-wrap items-center">
       <div class="relative w-full px-4 max-w-full flex-grow flex-1">
-        <h3 class="font-semibold text-lg" [ngClass]="color === 'white' ? 'text-blueGray-700' : 'text-white'">
+        <h3 class="font-semibold text-lg" >
           Card Tables
         </h3>
       </div>
@@ -103,63 +103,39 @@
         <tr>
           <th
             class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
-            [ngClass]="
-              color === 'light'
-                ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
-                : 'bg-red-800 text-red-300 border-red-700'
-            ">
+            >
             Email
           </th>
           <th
             class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
-            [ngClass]="
-              color === 'light'
-                ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
-                : 'bg-red-800 text-red-300 border-red-700'
-            ">
+            >
             Code
           </th>
           <th
             class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
-            [ngClass]="
-              color === 'light'
-                ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
-                : 'bg-red-800 text-red-300 border-red-700'
-            ">
+            >
             Name
           </th>
           <th
             class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
-            [ngClass]="
-              color === 'light'
-                ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
-                : 'bg-red-800 text-red-300 border-red-700'
-            ">
+            >
             Status
           </th>
           <th
             class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
-            [ngClass]="
-              color === 'light'
-                ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
-                : 'bg-red-800 text-red-300 border-red-700'
-            ">
+            >
             City
           </th>
           <th
             class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
-            [ngClass]="
-              color === 'light'
-                ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
-                : 'bg-red-800 text-red-300 border-red-700'
-            "></th>
+            ></th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <th
             class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex items-center">
-            <span class="ml-3 font-bold" [ngClass]="color === 'light' ? 'text-blueGray-600' : 'text-dark'"
+            <span class="ml-3 font-bold" 
               style="font-size: 15px;">
               nimal@gmail.com
             </span>
@@ -183,7 +159,7 @@
         <tr>
           <th
             class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex items-center">
-            <span class="ml-3 font-bold" [ngClass]="color === 'light' ? 'text-blueGray-600' : 'text-dark'"
+            <span class="ml-3 font-bold" 
               style="font-size: 15px;">
               nimal@gmail.com
             </span>
@@ -208,7 +184,7 @@
         <tr>
           <th
             class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex items-center">
-            <span class="ml-3 font-bold" [ngClass]="color === 'light' ? 'text-blueGray-600' : 'text-dark'"
+            <span class="ml-3 font-bold" 
               style="font-size: 15px;">
               nimal@gmail.com
             </span>
@@ -232,7 +208,7 @@
         <tr>
           <th
             class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex items-center">
-            <span class="ml-3 font-bold" [ngClass]="color === 'light' ? 'text-blueGray-600' : 'text-dark'"
+            <span class="ml-3 font-bold" 
               style="font-size: 15px;">
               nimal@gmail.com
             </span>
@@ -256,7 +232,7 @@
         <tr>
           <th
             class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex items-center">
-            <span class="ml-3 font-bold" [ngClass]="color === 'light' ? 'text-blueGray-600' : 'text-dark'"
+            <span class="ml-3 font-bold" 
               style="font-size: 15px;">
               nimal@gmail.com
             </span>

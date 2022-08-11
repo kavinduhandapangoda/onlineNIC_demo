@@ -29,7 +29,7 @@ export class FormComponent implements OnInit {
 
   userString:any = localStorage.getItem("userRole");
 
-  constructor(private router:Router, private dataservice:DataService, private _AESEncryptDecryptService: AESEncryptDecryptService) {}
+  constructor(private router:Router, private dataservice:DataService, public _AESEncryptDecryptService: AESEncryptDecryptService) {}
 
   ngOnInit(): void {
     console.log(this.obgv2)
